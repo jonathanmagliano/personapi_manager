@@ -27,7 +27,7 @@ public class PersonController {
 
     private final PersonService personService;
 
-    @PostMapping
+    @PostMapping("/{id}")
     @ResponseStatus(HttpStatus.CREATED)
     public MessageResponseDTO create(@RequestBody @Valid PersonDTO personDTO) {
         return personService.create(personDTO);
